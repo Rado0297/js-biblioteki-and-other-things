@@ -1,0 +1,108 @@
+/* CSS Basic Document */
+body
+{
+margin:0px auto;
+padding:0px;
+background-color:#FFFFFF;
+}
+.menu_table td
+{
+border-bottom:1px solid #85C226;
+height:28px;
+padding-left:12px;
+}
+.header_table
+{
+margin-bottom:31px;
+}
+.special_offer
+{
+margin-left:44px;
+margin-top:18px;
+}
+.bottom_line
+{
+border-bottom:1px dotted #000000;
+}
+.date_bg
+{
+background:url(../images/date_bg.gif) left top no-repeat;
+height:17px;
+padding-left:6px;
+font-size:10px;
+color:#FFFFFF;
+text-decoration:none;
+line-height:16px;
+background-color:inherit;
+}
+
+
+/* CSS Background image Document */
+.header_image
+{
+background:url(../images/header_image.jpg) left top no-repeat;
+height:175px;
+}
+
+
+
+
+
+
+
+
+/* CSS Text Document */
+body {
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: 11px;
+	font-style: normal;
+	line-height: 14px;
+	font-weight: normal;
+	font-variant: normal;
+	text-transform: none;
+	color: #27830E;
+	text-decoration: none;
+}
+.left_link
+{
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: 12px;
+	font-style: normal;
+	line-height: 28px;
+	font-weight: normal;
+	font-variant: normal;
+	text-transform: none;
+	color: #27830E;
+	background-color:inherit;
+	text-decoration: none;
+	}
+.left_link:hover
+{
+color:#C9232D;
+text-decoration:none;
+background-color:inherit;
+}
+.details_link {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 11px;
+	font-style: normal;
+	line-height: 14px;
+	font-weight: normal;
+	font-variant: normal;
+	text-transform: none;
+	color: #27830E;
+	background-color:inherit;
+	text-decoration: underline;
+}
+.details_link:hover {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 11px;
+	font-style: normal;
+	line-height: 14px;
+	font-weight: normal;
+	font-variant: normal;
+	text-transform: none;
+	color: #27830E;
+	background-color:inherit;
+	text-decoration:none;
+}

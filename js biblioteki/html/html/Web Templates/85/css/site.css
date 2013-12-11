@@ -1,0 +1,115 @@
+.style1 {
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: 12px;
+	font-weight: normal;
+	color: #3D4339;
+	line-height: 30px;
+}
+.style2 {
+	font-family: "Times New Roman", Times, serif;
+	font-size: 18px;
+	font-weight: bold;
+	color: #3D4339;
+	font-style: italic;
+}
+.style3 {
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: 11px;
+	color: #3A6306;
+}
+.style11 {
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: 11px;
+	color: #3A6306;
+}
+.style12 {
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: 11px;
+	color: #003300;
+}
+.style4 {
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: 11px;
+	color: #3A6306;
+	font-weight: bold;
+}
+.style5 {
+	font-family: Verdana;
+	font-size: 18px;
+	color: #CEEE73;
+	font-weight: lighter;
+	padding-left: 10px;
+	line-height: 25px;
+	}
+.style10 {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 20px;
+	color: #3A6306;
+	font-weight: bold;
+	font-style: italic;
+	}
+.style7 {
+	font-family: Verdana;
+	font-size: 10px;
+	color: #FFFFFF;
+}
+body {
+	background-color: #B1B1B1;
+}
+a:link {
+	color: #3D4339;
+	text-decoration: none;
+}
+a:visited {
+	color: #3D4339;
+	text-decoration: none;
+}
+a:hover {
+	color: #4F7A06;
+	text-decoration: none;
+}
+a:active {
+	color: #ffffff;
+	text-decoration: none;
+}
+.orange_link:link {
+		color: #3A6306;
+	text-decoration: none;
+}
+.orange_link:visited {
+	color: #3A6306;
+	text-decoration: underline;
+}
+.orange_link:hover {
+	color: #000000;
+	text-decoration: none;
+}
+.orange_link:active {
+	color: #3A6306;
+	text-decoration: underline;
+}
+.style8 {
+	font-family: "Times New Roman", Times, serif;
+	font-size: 36px;
+	color: #FFFF00;
+	font-weight: normal;
+	padding-left: 10px;
+	line-height: 45px;
+	font-style: oblique;
+}
+.style9 {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 14px;
+	color: #FFFFFF;
+}
+.bottomline {
+	border-top-width: 0px;
+	border-right-width: 0px;
+	border-bottom-width: 1px;
+	border-left-width: 0px;
+	border-top-style: none;
+	border-right-style: none;
+	border-bottom-style: solid;
+	border-left-style: none;
+	border-bottom-color: #B6BD91;
+}

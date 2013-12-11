@@ -1,0 +1,83 @@
+<?
+function javatoc($start,$end){
+	global $hc,$hl,$s,$l;
+	// $ta=array();if(isset($start)&&!isset($end))$end=$start;if(!isset($end))$end=3;if(!isset($start))$start=1;for($i=0;$i<$hl;$i++){if($l[$hc[$i]]==1){if($start==1)$ta[]=$hc[$i];$r1=$r2=$i;}if($s==$hc[$i]){$s3=true;for($j=$r1+1;$j<$hl;$j++){if($l[$hc[$j]]==1)break;if($l[$hc[$j]]==2){if($start<3&&$end>1)$ta[]=$hc[$j];$r2=$j;$s3=false;}if($s==$hc[$j]){for($k=$r2+1;$k<$hl;$k++){if($l[$hc[$k]]==3){if($end>2)$ta[]=$hc[$k];}else{$s3=false;break;}}}if($l[$hc[$j]]==3&&$l[$s]==1&&$s3)if($end>2)$ta[]=$hc[$j];}}}
+	
+	return  '<span id="menu"> </span>' . createMenu($hc,$st);
+}
+
+function linkText ($i)
+{
+	global $sn,$u;
+	return  $sn.'?'.$u[$i]   ;
+}
+
+function decoEnt($mystr,$trans_tbl  ) 
+{
+   
+    $ret  =   strtr($mystr , $trans_tbl);
+    $ret =    str_replace ("\n","",$ret );   $ret =    str_replace ("\r","",$ret ); 
+    $ret2=    preg_replace('/&#(\d+);/me', "chr('\\1')",$ret)  ;
+    return $ret2;
+}
+
+function createMenu($ta,$st)
+{
+	global $s,$c,$l,$h,$hc,$hl,$pth;
+	
+	if(count($ta)==0)return;
+
+	$trans_tbl = get_html_translation_table(HTML_ENTITIES);
+    	$trans_tbl = array_flip($trans_tbl);
+
+	$t="\n<script type='text/javascript'>\n";
+	$j=0;
+	$cl =0;  
+	$lf[0]=$lf[1]=$lf[2]=$lf[3]= 0; 
+	$lind[0]=$lind[1]=$lind[2]=$lind[3]= 0; 	
+	for($i=0;$i<$hl;$i++){
+		$taj = $ta[$j];		
+		if(!isset($taj))break;
+		if($hc[$i]!=$taj )continue;
+		$tf=($s!=$taj);		
+		$cl =$l[$taj];  
+		$nl = $l[ $ta[$j+1]];
+		
+		if(true) {
+
+		    if($nl >  $cl) { 
+			   $lind[$cl] = $taj;
+			   $lf[$cl] ++;
+			   $lf[$nl] = 0;
+	
+			}
+		    if($nl <=  $cl) { 
+				$lf[$cl] ++;		
+				if( $cl == 1) $t.= sprintf('Menu%d=new Array("%s", "%s","",0 ,20,MenuMainWidth ); '."\n",$lf[1], decoEnt( $h[$taj], $trans_tbl)    , linkText($taj));
+				if( $cl == 2) $t.= sprintf('Menu%d_%d=new Array("%s","%s","",0,20,MenuSubWidth  ) ;'."\n",$lf[1],$lf[2],decoEnt( $h[$taj], $trans_tbl) , linkText($taj));
+				if( $cl == 3) $t.= sprintf('Menu%d_%d_%d=new Array( "%s","%s","",0,20,MenuSubWidth  );'."\n",$lf[1],$lf[2],$lf[3],decoEnt( $h[$taj], $trans_tbl) , linkText($taj));								
+			}
+		   	 if( $cl == 3 && $nl == 2   ) { 
+				$t.= sprintf('Menu%d_%d=new Array("%s", "%s","", %d,20,MenuSubWidth ) ;'."\n",$lf[1],$lf[2] ,decoEnt($h[$lind[2]], $trans_tbl) , linkText($lind[2]),$lf[3]);
+			
+			}
+			if( $cl == 3 && $nl == 1  || $cl ==3  &&  !isset($nl) ) { 
+				$t.= sprintf('Menu%d_%d=new Array("%s", "%s", "",%d ,20,MenuSubWidth ) ;'."\n",$lf[1],$lf[2] ,decoEnt($h[$lind[2]], $trans_tbl) , linkText($lind[2]),$lf[3]);
+				$t.= sprintf('Menu%d=new Array("%s", "%s", "",%d,20,MenuMainWidth) ; '."\n",$lf[1], decoEnt($h[$lind[1]], $trans_tbl) , linkText($lind[1]),$lf[2]);				
+			}					
+			if( $cl == 2 &&  $nl == 1  || $cl == 2 &&  !isset($nl)  ) { 
+				$t.= sprintf('Menu%d=new Array( "%s", "%s", "",%d ,20,MenuMainWidth );'."\n",$lf[1],decoEnt($h[$lind[1]], $trans_tbl) , linkText($lind[1]), $lf[2]);				
+			}					
+
+		}
+		$j++;
+	}
+	$t.="NoOffFirstLineMenus = $lf[1]; \n";
+	$t.="Arrws=['".$pth['folder']['template']."tri.gif',5,10,'".$pth['folder']['template']."tridown.gif',10,5,'".$pth['folder']['template']."trileft.gif',5,10] ;" ;	
+
+	$t.= "</script>";
+
+	return $t;
+}
+?>
+<?=javatoc()?>

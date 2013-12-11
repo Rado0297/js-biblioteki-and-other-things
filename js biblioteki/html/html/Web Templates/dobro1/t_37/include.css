@@ -1,0 +1,46 @@
+body,td,input	{ font-family: tahoma, helvetica; font-size: 11px; color: #333300; line-height: 12px; }
+form		{ margin: 0px; }
+a:hover		{
+	text-decoration: none;
+	color: #6699FF;
+	font-weight: normal;
+
+}
+.blink		{
+	font-weight: normal;
+	color: #ffffff;
+	text-decoration: none;
+}
+.bottom		{ font-size: 10px; color: #bebebe; }
+input.text	{
+	background: url(none) center center;
+	clear: both;
+	float: none;
+	border: none;
+	color: #FFFFFF;
+
+
+
+
+
+}
+p            {
+	margin-top: 0px;
+	margin-bottom: 0px;
+	font-family: Tahoma;
+	font-size: 9px;
+
+
+}
+br.short	{ line-height: 4px; }
+a:visited {
+	color: #FFFFFF;
+	text-decoration: none;
+	font-weight: normal;
+
+}
+a:link {
+	font-weight: normal;
+	color: #000000;
+	text-decoration: none;
+}

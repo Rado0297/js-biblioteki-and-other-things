@@ -1,0 +1,12 @@
+Simply open text.txt and edit input text!
+
+Example =  &t1=hello world  " So you would edit "  ( hello world )
+
+Each text set starts with the & symbol and the input name  ( &name=)
+
+! So do not use the & symbol for any text you add !
+
+To edit button url's use the method above for button then edit url to the corresponding button!
+
+Example = for button 1 use the input ( &url1=# )  replace the # symbol with your url !
+
