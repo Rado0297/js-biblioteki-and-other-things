@@ -1,0 +1,80 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+<HTML>
+<HEAD>
+<META NAME="Generator" CONTENT="TextPad 4.4">
+<LINK href="general.css" rel="stylesheet" type="text/css">
+<SCRIPT LANGUAGE="JavaScript">
+<!-- Original:  Randy Bennett (rbennett@thezone.net) -->
+<!-- Web Site:  http://home.thezone.net/~rbennett/sitemap.htm -->
+
+
+
+
+<!-- Begin
+N = (document.all) ? 0 : 1;
+var ob;
+function MD(e) {
+if (N) {
+ob = document.layers[e.target.name];
+X=e.x;
+Y=e.y;
+return false;
+}
+else {
+ob = event.srcElement.parentElement.style;
+X=event.offsetX;
+Y=event.offsetY;
+   }
+}
+function MM(e) {
+if (ob) {
+if (N) {
+ob.moveTo((e.pageX-X), (e.pageY-Y));
+}
+else {
+ob.pixelLeft = event.clientX-X + document.body.scrollLeft;
+ob.pixelTop = event.clientY-Y + document.body.scrollTop;
+return false;
+      }
+   }
+}
+function MU() {
+ob = null;
+}
+
+if (N) {
+document.captureEvents(Event.MOUSEDOWN | Event.MOUSEMOVE | Event.MOUSEUP);
+}
+document.onmousedown = MD;
+document.onmousemove = MM;
+document.onmouseup = MU;
+//  End -->
+</script>
+</HEAD>
+
+<BODY Background=../graphics/grayback.jpg>
+<center><BR><BR><BR>
+
+<!-- Demonstration -->
+<div id="s" style="position:absolute;left:50;top:100;">
+<img src=ball.gif name="s">
+</div>
+
+<div id="d" style="position:absolute;left:50;top:150;">
+<img src=ball.gif name="d">
+</div>
+
+<div id="c" style="position:absolute;left:100;top:100;">
+<img src=ball.gif name="c">
+</div>
+
+<div id="h" style="position:absolute;left:100;top:150;">
+<img src=ball.gif name="h">
+</div>
+
+Just click and hold the 4 images and then you can move them around the page!
+<P>
+<P>
+</center>
+</BODY>
+</HTML>

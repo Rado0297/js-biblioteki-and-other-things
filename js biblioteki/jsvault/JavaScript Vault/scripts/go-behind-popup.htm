@@ -1,0 +1,92 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+<HTML>
+<HEAD>
+<META NAME="Generator" CONTENT="TextPad 4.4">
+<LINK href="general.css" rel="stylesheet" type="text/css">
+<SCRIPT LANGUAGE="JavaScript">
+<!-- Original:  David Sosnowski (support@codelifter.com) -->
+<!-- Web Site:  http://www.codelifter.com -->
+
+<!-- Begin
+// ====================================
+// Copyright 2001 by www.CodeLifter.com
+// Do *not* remove this notice.
+// ====================================
+
+// Set the url of the banner popup window page
+var theURL = "YourBannerPage.html";
+
+// Set the title of the popup window
+var title = "Popup Page"
+
+// Set the size of the popup window
+var windowWidth  = 478; // cannot be less than 100
+var windowHeight = 100; // cannot be less than 100
+
+// Set the position of the popup window
+var windowX = 100;
+var windowY = 100;
+
+// Set true to auto-center (positions will be ignored)
+var autocenter = false;
+
+// Set true for popup to close when launch page does
+var autoclose = true;
+
+// Do not edit below this line.
+// ============================
+
+var s="width="+windowWidth+",height="+windowHeight;
+var beIE=document.all?true:false;
+var done=new Object("no");
+
+if(autocenter){
+windowX = (window.screen.width-windowWidth)/2;
+windowY = (window.screen.height-windowHeight)/2;
+}
+
+function doAgilePopup(){
+  if (beIE){
+  agilePopper = window.open("","popAgile","fullscreen,"+s);
+  agilePopper.blur();
+  window.focus();
+  agilePopper.resizeTo(windowWidth,windowHeight);
+  agilePopper.moveTo(windowX,windowY);
+  var frameString=""+
+"<html>"+
+"<head>"+
+"<title>"+title+"</title>"+
+"</head>"+
+"<frameset rows='*,0' framespacing=0 border=0 frameborder=0>"+
+"<frame name='top' src='"+theURL+"' scrolling=no>"+
+"<frame name='bottom' src='about:blank' scrolling='no'>"+
+"</frameset>"+
+"</html>"
+  agilePopper.document.open();
+  agilePopper.document.write(frameString);
+  agilePopper.document.close();
+  }else{
+  agilePopper=window.open(theURL,"popAgile","scrollbars=no,"+s);
+  agilePopper.blur();
+  window.focus();
+  agilePopper.resizeTo(windowWidth,windowHeight);
+  agilePopper.moveTo(windowX,windowY);
+  }
+  agilePopper.blur();
+  if (autoclose){
+  window.onunload = function(){agilePopper.close();}
+  }
+  done="okay";
+}
+
+//  End -->
+</script>
+
+</HEAD>
+
+<BODY Background=../graphics/grayback.jpg onLoad="doAgilePopup()">
+<center><BR><BR><BR>
+
+</center>
+</BODY>
+</HTML>

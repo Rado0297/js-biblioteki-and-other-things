@@ -1,0 +1,74 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+<HTML>
+<HEAD>
+<LINK href="general.css" rel="stylesheet" type="text/css">
+
+<SCRIPT LANGUAGE="JavaScript">
+<!-- Original:  David Sosnowski (support@codelifter.com) -->
+<!-- Web Site:  http://www.codelifter.com -->
+<!-- Begin
+
+/*
+In the url, it's generally best to use a *relative* address
+to your content page with this script; otherwise, IE loses
+its sense of "parentage" over the window, and may throw
+errors on attempts to relaunch when the fullscreen window is
+already open.
+*/
+
+// set the page to go to...
+url = "yourpage.html";
+
+// set how fast to expand horizontally
+// lower is slower
+var speedX = 7;
+
+// set how fast to expand vertically
+// lower is slower
+var speedY = 5;
+
+// set background color of "Loading..." screen
+var bgColor = "#000000";
+
+// set text color of "Loading..." screen
+var txtColor = "#FF80000";
+
+// do not edit below this line
+// ---------------------------
+if (document.all) {
+var wide = window.screen.availWidth;
+var high = window.screen.availHeight;
+}
+function andBoom() {
+if (document.all) {
+var Boomer = window.open("","BoomWindow","fullscreen");
+Boomer.document.write('<HTML><BODY BGCOLOR='+bgColor+' SCROLL=NO><FONT FACE=ARIAL COLOR='+txtColor+'>Loading...</FONT></BODY></HTML>');
+Boomer.focus();
+for (H=1; H<high; H+= speedY) {
+Boomer.resizeTo(1,H);
+}
+for (W=1; W<wide; W+= speedX) {
+Boomer.resizeTo(W,H);
+}
+Boomer.location = url;
+}
+else {
+window.open(url,"BoomWindow","");
+   }
+}
+//  End -->
+</script>
+
+
+</HEAD>
+
+<BODY Background=../graphics/grayback.jpg>
+<center><BR><BR><BR>
+<a href="javascript:andBoom()">Click Here To Launch Page</a>
+
+Be sure that the page you link to has a link to close the window:  <a href="javascript:window.close();">Close Window</a>
+
+
+</center>
+</BODY>
+</HTML>

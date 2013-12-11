@@ -1,0 +1,5 @@
+This installation will not make any changes to your windows register or system files.
+
+All files will be installed only into this programs directory.
+
+An uninstall file will be included.

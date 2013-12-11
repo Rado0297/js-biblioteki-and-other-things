@@ -1,0 +1,41 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+<HTML>
+<HEAD>
+<LINK href="general.css" rel="stylesheet" type="text/css">
+
+<SCRIPT LANGUAGE="JavaScript">
+<!-- Original:  Martijn Sinnema (sinnemavleiger@wanadoo.nl) -->
+<!-- Web Site:  http://home.wanadoo.nl/sinnemavlieger/martin -->
+<!-- Begin
+function expandingWindow(website) {
+var heightspeed = 2; // vertical scrolling speed (higher = slower)
+var widthspeed = 7;  // horizontal scrolling speed (higher = slower)
+var leftdist = 0;    // distance to left edge of window
+var topdist = 0;     // distance to top edge of window
+if (document.all) {
+var winwidth = window.screen.availWidth - leftdist;
+var winheight = window.screen.availHeight - topdist;
+var sizer = window.open("","","left=" + leftdist + ",top=" + topdist + ",width=1,height=1,scrollbars=yes");
+for (sizeheight = 1; sizeheight < winheight; sizeheight += heightspeed) {
+sizer.resizeTo("1", sizeheight);
+}
+for (sizewidth = 1; sizewidth < winwidth; sizewidth += widthspeed) {
+sizer.resizeTo(sizewidth, sizeheight);
+}
+sizer.location = website;
+}
+else
+window.location = website;
+}
+//  End -->
+</script>
+
+</HEAD>
+
+<BODY Background=../graphics/grayback.jpg>
+<center><BR><BR><BR>
+<a href="../" onClick="expandingWindow('../');return false;">Open a directory on your drive!</a>
+
+</center>
+</BODY>
+</HTML>

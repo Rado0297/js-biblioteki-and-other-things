@@ -1,0 +1,54 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+<HTML>
+<HEAD>
+<META NAME="Generator" CONTENT="TextPad 4.4">
+<LINK href="general.css" rel="stylesheet" type="text/css">
+<SCRIPT LANGUAGE="JavaScript">
+
+<!-- Begin
+<!-- Hide the script from old browsers --
+function loadpage ()
+
+{location.reload('view.htm')
+}
+// --End Hiding Here -->
+</script>
+
+<script language="JavaScript">
+function movepage()
+{
+var direction =event.keyCode
+switch(direction){
+case 39:
+window.moveBy(15, 0);
+window.moveBy(0, 0);
+break
+case 37:
+window.moveBy(-15, 0);
+window.moveBy(0, 0);
+break
+case 38:
+window.moveBy(0, 0);
+window.moveBy(0, -15);
+break
+case 40:
+window.moveBy(0, 0);
+window.moveBy(0, 15);
+break
+default:
+break
+}
+}
+//  End -->
+</script>
+
+
+</HEAD>
+
+<BODY Background=../graphics/grayback.jpg onLoad="top.window.focus()" onkeydown="movepage()">
+<center><BR><BR><BR>
+<b>Press the arrow keys to move this window!</b>
+
+</center>
+</BODY>
+</HTML>
